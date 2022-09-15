@@ -88,18 +88,18 @@
         android:contentDescription="@string/like"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/barrierBottom"
-        app:srcCompat="@drawable/ic_favorite_24"
-        tools:srcCompat="@drawable/ic_favorite_24" />
+        app:srcCompat="@drawable/ic_favorite_border_24"
+        tools:srcCompat="@drawable/ic_favorite_border_24" />
 
     <TextView
         android:id="@+id/favoriteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
+        android:text="10"
         app:layout_constraintBottom_toBottomOf="@id/barrierBottom"
         app:layout_constraintStart_toEndOf="@id/favorite"
-        app:layout_constraintTop_toBottomOf="@id/favorite"
-        android:text="10" />
+        app:layout_constraintTop_toBottomOf="@id/favorite" />
 
     <ImageView
         android:id="@+id/share"
@@ -118,19 +118,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
+        android:text="5"
         app:layout_constraintBottom_toBottomOf="@id/barrierBottom"
         app:layout_constraintStart_toEndOf="@id/share"
-        app:layout_constraintTop_toBottomOf="@id/share"
-        android:text="5" />
+        app:layout_constraintTop_toBottomOf="@id/share" />
 
     <TextView
         android:id="@+id/visibilityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
+        android:text="12,4K"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/barrierBottom"
-        android:text="12,4K" />
+        app:layout_constraintTop_toTopOf="@id/barrierBottom" />
 
     <ImageView
         android:id="@+id/visibility"
