@@ -4,4 +4,7 @@
     <string name="nmedia">НМедиа!</string>
     <string name="description_post_author_avatar">Аватар автора поста</string>
     <string name="description_post_menu">Меню</string>
+    <string name="views">Колличество просмотров</string>
+    <string name="share">Сколько поделилось ссылкой</string>
+    <string name="like">Сколько лайков</string>
 </resources>
