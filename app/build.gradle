@@ -1,18 +1,19 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "ru.netology.nmedia"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        buildFeatures.viewBinding = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,6 +30,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'ru.netology.nmedia'
+    buildToolsVersion '33.0.0'
 }
 
 dependencies {

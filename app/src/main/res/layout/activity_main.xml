@@ -80,7 +80,7 @@
         app:constraint_referenced_ids="content" />
 
     <ImageView
-        android:id="@+id/favorite"
+        android:id="@+id/like"
         android:layout_width="@dimen/favorite_like_size"
         android:layout_height="@dimen/favorite_like_size"
         android:layout_margin="@dimen/margin_default"
@@ -88,18 +88,18 @@
         android:contentDescription="@string/like"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/barrierBottom"
-        app:srcCompat="@drawable/ic_favorite_border_24"
-        tools:srcCompat="@drawable/ic_favorite_border_24" />
+        app:srcCompat="@drawable/ic_like_gray"
+        tools:srcCompat="@drawable/ic_like_gray" />
 
     <TextView
-        android:id="@+id/favoriteText"
+        android:id="@+id/likeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
         android:text="10"
         app:layout_constraintBottom_toBottomOf="@id/barrierBottom"
-        app:layout_constraintStart_toEndOf="@id/favorite"
-        app:layout_constraintTop_toBottomOf="@id/favorite" />
+        app:layout_constraintStart_toEndOf="@id/like"
+        app:layout_constraintTop_toBottomOf="@id/like" />
 
     <ImageView
         android:id="@+id/share"
@@ -108,7 +108,7 @@
         android:layout_margin="@dimen/margin_default"
         android:background="@android:color/transparent"
         android:contentDescription="@string/share"
-        app:layout_constraintStart_toEndOf="@id/favoriteText"
+        app:layout_constraintStart_toEndOf="@id/likeText"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:srcCompat="@drawable/ic_share_24"
         tools:srcCompat="@drawable/ic_share_24" />
