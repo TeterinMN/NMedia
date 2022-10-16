@@ -92,14 +92,14 @@
         tools:srcCompat="@drawable/ic_like_gray" />
 
     <TextView
-        android:id="@+id/likeText"
+        android:id="@+id/likeCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
-        android:text="10"
         app:layout_constraintBottom_toBottomOf="@id/barrierBottom"
         app:layout_constraintStart_toEndOf="@id/like"
-        app:layout_constraintTop_toBottomOf="@id/like" />
+        app:layout_constraintTop_toBottomOf="@id/like"
+        tools:text="10" />
 
     <ImageView
         android:id="@+id/share"
@@ -108,7 +108,7 @@
         android:layout_margin="@dimen/margin_default"
         android:background="@android:color/transparent"
         android:contentDescription="@string/share"
-        app:layout_constraintStart_toEndOf="@id/likeText"
+        app:layout_constraintStart_toEndOf="@id/likeCount"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:srcCompat="@drawable/ic_share_24"
         tools:srcCompat="@drawable/ic_share_24" />
@@ -118,19 +118,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
-        android:text="5"
         app:layout_constraintBottom_toBottomOf="@id/barrierBottom"
         app:layout_constraintStart_toEndOf="@id/share"
-        app:layout_constraintTop_toBottomOf="@id/share" />
+        app:layout_constraintTop_toBottomOf="@id/share"
+        tools:text="5" />
 
     <TextView
-        android:id="@+id/visibilityText"
+        android:id="@+id/viewsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
-        android:text="12,4K"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/barrierBottom" />
+        app:layout_constraintTop_toTopOf="@id/barrierBottom"
+        tools:text="12,4K" />
 
     <ImageView
         android:id="@+id/visibility"
@@ -139,7 +139,7 @@
         android:layout_margin="@dimen/margin_default"
         android:background="@android:color/transparent"
         android:contentDescription="@string/views"
-        app:layout_constraintRight_toLeftOf="@id/visibilityText"
+        app:layout_constraintRight_toLeftOf="@id/viewsText"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:srcCompat="@drawable/ic_visibility_24"
         tools:srcCompat="@drawable/ic_visibility_24" />
