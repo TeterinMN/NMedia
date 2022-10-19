@@ -31,8 +31,7 @@ class PostRepositoryInMemoryImpl : PostRepository {
     }
 
     override fun share() {
-        val share = post.copy(share = post.share)
-        if (share == post.copy()) post.share = post.share + 10
-        data.value = share
+        post = post.copy(share = post.share + 10)
+        data.value = post
     }
 }
