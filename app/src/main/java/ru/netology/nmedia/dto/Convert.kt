@@ -1,4 +1,5 @@
 package ru.netology.nmedia.dto
+
 object Convert {
     fun longIntToString(x: Long): String {
         when {
