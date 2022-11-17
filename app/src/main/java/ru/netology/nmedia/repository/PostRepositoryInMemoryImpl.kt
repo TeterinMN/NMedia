@@ -6,7 +6,7 @@ import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.viewmodel.PostRepository
 
 class PostRepositoryInMemoryImpl : PostRepository {
-    private var post = listOf(
+    private var posts = listOf(
         Post(
             id = 1,
             author = "Нетология. Университет интернет-профессий будущего",
@@ -122,10 +122,26 @@ class PostRepositoryInMemoryImpl : PostRepository {
             sharedById = false
         )
     )
-    private val data = MutableLiveData(post)
+    private val data = MutableLiveData(posts)
     override fun getAll(): LiveData<List<Post>> = data
+    override fun save(post: Post) {
+        var nextId = post.id
+        data.value = if (post.id == 0L) {
+            listOf(post.copy(
+                id = nextId++,
+                author = "Me",
+                published = "Now",
+                likedByMe = false,
+                sharedById = false
+            )) + posts
+        } else {
+            posts.map {
+                if (it.id != post.id) it else it.copy(content = post.content)}
+        }
+    }
+
     override fun likeById(id: Long) {
-        post = post.map { post ->
+        posts = posts.map { post ->
             if (post.id == id) {
                 post.copy(
                     likedByMe = !post.likedByMe,
@@ -135,11 +151,11 @@ class PostRepositoryInMemoryImpl : PostRepository {
                 post
             }
         }
-        data.value = post
+        data.value = posts
     }
 
     override fun sharedById(id: Long) {
-        post = post.map { post ->
+        posts = posts.map { post ->
             if (post.id == id) {
                 post.copy(
                     share = post.share + 10
@@ -148,6 +164,11 @@ class PostRepositoryInMemoryImpl : PostRepository {
                 post
             }
         }
-        data.value = post
+        data.value = posts
+    }
+
+    override fun removeById(id: Long) {
+        posts = posts.filter { it.id != id }
+        data.value = posts
     }
 }

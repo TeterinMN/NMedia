@@ -1,10 +1,18 @@
 <resources>
     <string name="app_name">NMedia</string>
     <string name="nmedia">NMedia!</string>
-    <string name="description_post_author_avatar">Avatar of the author of the post</string>
+    <string name="description_post_author_avatar">Post author avatar</string>
     <string name="description_post_menu">Post menu</string>
-    <string name="views">Number of views</string>
-    <string name="share">Number of share</string>
-    <string name="like">Number of likes</string>
-
+    <string name="description_post_like">Like</string>
+    <string name="description_post_share">Share</string>
+    <string name="description_post_save">Save</string>
+    <string name="menu_remove">Remove</string>
+    <string name="post_text">Post Text</string>
+    <string name="menu_edit">Edit</string>
+    <string name="error_empty_content">Content can\'t be empty</string>
+    <string name="views">Views</string>
+    <string name="share">Shared</string>
+    <string name="like">Liked</string>
+    <string name="post_content_hint">Post content</string>
+    <string name="edit_message">Edit Message</string>
 </resources>

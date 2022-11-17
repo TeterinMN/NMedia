@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,9 +10,65 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/toolsTop"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/card_post" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/toolsTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="contentEditText,save" />
+
+    <ImageButton
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/description_post_like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contentEditText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/ic_save_48"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="@string/edit_message"
+        android:importantForAutofill="no"
+        android:padding="@dimen/common_spacing"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@id/contentEditText"
+        app:layout_constraintEnd_toStartOf="@id/undoEditingButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/undoEditingButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintBottom_toTopOf="@id/contentEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editMessage" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/contentEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="@string/post_content_hint"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/common_spacing"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/save"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
