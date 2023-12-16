@@ -92,7 +92,8 @@
         android:layout_marginStart="@dimen/margin_6dp"
         android:layout_marginTop="@dimen/margin_6dp"
         app:srcCompat="@drawable/likes_24"
-        tools:layout_editor_absoluteY="276dp" />
+        tools:layout_editor_absoluteY="276dp"
+        android:contentDescription="@string/like" />
 
     <TextView
         android:id="@+id/likeTextView"
@@ -113,7 +114,8 @@
         android:layout_marginStart="@dimen/margin_16dp"
         app:layout_constraintStart_toEndOf="@+id/likeTextView"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
-        app:srcCompat="@drawable/share_24" />
+        app:srcCompat="@drawable/share_24"
+        android:contentDescription="@string/share" />
 
     <TextView
         android:id="@+id/shareTextView"
@@ -135,7 +137,8 @@
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         android:background="@android:color/transparent"
         app:srcCompat="@drawable/views_24"
-        tools:layout_editor_absoluteY="260dp" />
+        tools:layout_editor_absoluteY="260dp"
+        android:contentDescription="@string/views" />
 
     <TextView
         android:id="@+id/viewsTextView"

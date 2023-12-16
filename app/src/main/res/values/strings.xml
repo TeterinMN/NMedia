@@ -3,4 +3,7 @@
     <string name="nmedia">NMedia!</string>
     <string name="avatar">Avatar</string>
     <string name="menu">Menu</string>
+    <string name="views">Views</string>
+    <string name="share">Share</string>
+    <string name="like">Like</string>
 </resources>

@@ -4,4 +4,7 @@
     <string name="nmedia">НМедиа!</string>
     <string name="avatar">Аватарка</string>
     <string name="menu">Меню</string>
+    <string name="views">Просмотры</string>
+    <string name="share">Поделиться</string>
+    <string name="like">Нравится</string>
 </resources>
